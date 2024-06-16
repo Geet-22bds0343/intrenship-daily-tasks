@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid black;
+        padding: 10px;
+      }
+      tr:nth-child(even) {
+        background-color: lightgray;
+      }
+      tr:nth-child(odd) {
+        background-color: white;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: blue;
+        font-size: large;
+        transition: 0.5s;
+      }
+    </style>
+    <table>
+      <h4>Day 1</h4>
+      <tr>
+        <td>Task 1</td>
+        <td>
+          <a href="Day1_task1.html" target="_self">click here</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Task 2</td>
+        <td>
+          <a href="Day1_task2.html">click here</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Task 3</td>
+        <td>
+          <a href="Day1_task3.html">click here</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Task 4</td>
+        <td>
+          <a href="Day1_task4.html">click here</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Task 5</td>
+        <td>
+          <a href="Day1_task5.html">click here</a>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <h4>Day 2</h4>
+      <tr>
+        <td>Task 1</td>
+        <td>
+          <a href="Day2_Task1.html">click here</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Task 2 Part 1</td>
+        <td>
+          <a href="Day2_Task2_1.html">click here</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Task 2 Part 2</td>
+        <td>
+          <a href="Day2_Task2_2.html">click here</a>
+        </td>
+      </tr>
+    </table>
+    <script>
+      var table = document.getElementsByTagName("table")[0];
+      table.addEventListener("click", function (e) {
+        if (e.target.tagName == "A") {
+          window.open(e.target.href);
+        }
+      });
+    </script>
+  </body>
+</html>
